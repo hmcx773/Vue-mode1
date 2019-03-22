@@ -1,21 +1,20 @@
 <template>
   <div class="gird">
     <div class="demo-icon">
-      <div
-        class="van-col van-col--6"
-        v-for="item in girds"
-        :key="item.id"
-      >
-        <i class="van-icon">
-          <img :src="item.src" />
-        </i>
-        <span>{{item.title}}</span>
+      <div class="van-col van-col--6" v-for="item in girds" :key="item.id">
+        <router-link :to="item.to">
+          <i class="van-icon">
+            <img :src="item.src">
+          </i>
+          <span>{{item.title}}</span>
+        </router-link>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Toast from "vant";
 export default {
   data: () => ({
     girds: [
@@ -33,25 +32,25 @@ export default {
       },
       {
         id: 3,
-        to: "/home/goodslist",
+        to: "/home/shoplist",
         title: "商品购买",
         src: "static/gird/menu3.png"
       },
       {
         id: 4,
-        to: "/home/newslist",
+        to: "/home/commentlist",
         title: "留言反馈",
         src: "static/gird/menu4.png"
       },
       {
         id: 5,
-        to: "/home/newslist",
+        to: "/home/videolist",
         title: "视频区域",
         src: "static/gird/menu5.png"
       },
       {
         id: 6,
-        to: "/home/newslist",
+        to: "/home/phonelist",
         title: "联系我们",
         src: "static/gird/menu6.png"
       }
@@ -76,6 +75,7 @@ export default {
       width: 33.33333%;
       display: inline-block;
       vertical-align: middle;
+
       img {
         width: 60px;
         height: 60px;
@@ -85,6 +85,7 @@ export default {
         padding: 0 5px;
         font-size: 12px;
         line-height: 14px;
+        color: #455a64;
       }
     }
     .van-icon {

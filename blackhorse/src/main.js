@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 
 import 'animate.css/animate.css'
+import 'regenerator-runtime/runtime.js'
 
 //启动路由
 import router from './router'
@@ -12,7 +13,13 @@ Vue.use(router)
 // import index from './router/index'
 
 import axios from 'axios'
-Vue.prototype.$http=axios
+Vue.prototype.$http = axios
+axios.defaults.baseURL = "http://localhost:5000"
+
+import moment from 'moment'
+Vue.filter('datefmt', function (data, str = "YYYY-MM-DD hh:mm:ss") {
+  return moment(data).format(str)
+})
 
 
 //导入vant插件
@@ -21,9 +28,11 @@ import {
   Tabbar,
   TabbarItem,
   Swipe,
-  SwipeItem
+  SwipeItem,
+  Card,
+  Button
 } from 'vant';
-Vue.use(NavBar).use(Tabbar).use(TabbarItem).use(Swipe).use(SwipeItem);
+Vue.use(NavBar).use(Tabbar).use(TabbarItem).use(Swipe).use(SwipeItem).use(Card).use(Button);
 
 Vue.config.productionTip = false
 

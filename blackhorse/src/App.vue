@@ -5,10 +5,10 @@
       <router-view class="animated" style="width: 100%"></router-view>
     </transition>
     <van-tabbar v-model="active">
-      <van-tabbar-item icon="home-o" to="/Home">首页</van-tabbar-item>
-      <van-tabbar-item icon="contact" to="/Member">会员</van-tabbar-item>
-      <van-tabbar-item icon="cart-o" to="/Shopcar" info="0">购物车</van-tabbar-item>
-      <van-tabbar-item icon="search" to="/Search">搜索</van-tabbar-item>
+      <van-tabbar-item icon="home-o" to="/home">首页</van-tabbar-item>
+      <van-tabbar-item icon="contact" to="/member">会员</van-tabbar-item>
+      <van-tabbar-item icon="cart-o" to="/shopcar" info="0">购物车</van-tabbar-item>
+      <van-tabbar-item icon="search" to="/search">搜索</van-tabbar-item>
     </van-tabbar>
   </div>
 </template>

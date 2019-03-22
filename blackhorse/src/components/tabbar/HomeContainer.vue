@@ -5,11 +5,11 @@
         <img :src="item.img" alt>
       </van-swipe-item>
     </van-swipe>
-    <Gird />
+    <Gird/>
   </div>
 </template>
 <script>
-import Gird from '../components/Gird'
+import Gird from "../Sub/Gird";
 export default {
   data() {
     return {
@@ -26,20 +26,19 @@ export default {
     this.getlunbo();
   },
   methods: {
-    getlunbo() {
+    async getlunbo() {
       //发送请求
-      this.$http.get("http://localhost:5000/api/getlunbo").then(result => {
-        // console.log(result.body);
-        if (result.data.status === 0) {
-          // 成功了
-          console.log(result.data);
-
-          this.items = result.data.message;
-        } else {
-          // 失败的
-          console.log("失败");
-        }
-      });
+      const {
+        data: { status, message }
+      } = await this.$http.get("/api/getlunbo");
+      // console.log(result.body);
+      if (status === 0) {
+        // 成功了
+        this.items = message;
+      } else {
+        // 失败的
+        console.log("失败");
+      }
     }
   }
 };
