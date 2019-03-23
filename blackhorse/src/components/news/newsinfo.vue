@@ -46,8 +46,9 @@ export default {
 </script>
 <style lang="less">
 .newsinfo {
-  padding: 0 5px 50px 0;
+  padding: 0 0 50px 1px;
   width: 100%;
+  height: 100%;
   .title {
     font-size: 16px;
     text-align: center;

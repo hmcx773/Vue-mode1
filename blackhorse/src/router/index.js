@@ -6,11 +6,12 @@ import member from '../components/tabbar/MemberContainer'
 import search from '../components/tabbar/SearchContainer'
 import shopcar from '../components/tabbar/ShopcarContainer'
 import newsList from '../components/news/newsList'
-import photolist from '../components/news/photolist'
+import photolist from '../components/photo/photolist'
 import shoplist from '../components/news/shoplist'
 import videolist from '../components/news/videolist'
 import phonelist from '../components/news/phonelist'
 import newsinfo from '../components/news/newsinfo'
+import photoprive from '../components/photo/photoprive'
 
 Vue.use(Router)
 
@@ -22,36 +23,40 @@ export default new Router({
     {
       path: '/member',
       component: member
-    },{
+    }, {
       path: '/search',
       component: search
-    },{
-      path:'/shopcar',
-      component:shopcar
+    }, {
+      path: '/shopcar',
+      component: shopcar
     },
     {
-      path:'/home/newsList',
-      component:newsList
+      path: '/home/newsList',
+      component: newsList
     },
     {
-      path:'/home/phonelist',
-      component:phonelist
+      path: '/home/phonelist',
+      component: phonelist
     },
     {
-      path:'/home/photolist',
-      component:photolist
+      path: '/home/photolist',
+      component: photolist
     },
     {
-      path:'/home/shoplist',
-      component:shoplist
+      path: '/home/shoplist',
+      component: shoplist
     },
     {
-      path:'/home/videolist',
-      component:videolist
+      path: '/home/videolist',
+      component: videolist
     },
     {
-      path:'/home/newsinfo/:id',
-      component:newsinfo
-    }
+      path: '/home/newsinfo/:id',
+      component: newsinfo
+    },
+    {
+      path: '/home/photoprive/:id',
+      component: photoprive
+    },
   ]
 })

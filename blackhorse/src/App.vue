@@ -1,8 +1,8 @@
 <template>
-  <div id="app">
-    <van-nav-bar title="黑马程序员商城" :class="classObj"/>
+  <div id="app" class="app">
+    <van-nav-bar title="黑马程序员商城" :class="classObj"  />
     <transition enter-active-class="fadeInRight" leave-active-class="fadeOutLeft">
-      <router-view class="animated" style="width: 100%"></router-view>
+      <router-view class="animated top" style="width: 100%"></router-view>
     </transition>
     <van-tabbar v-model="active">
       <van-tabbar-item icon="home-o" to="/home">首页</van-tabbar-item>
@@ -39,6 +39,16 @@ export default {
 <style scope lang="less">
 #app {
   overflow-x: hidden;
+}
+.app .van-nav-bar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999 !important;
+  left: 0;
+}
+.top{
+  margin-top: 46px;
 }
 .nav {
   background: skyblue;

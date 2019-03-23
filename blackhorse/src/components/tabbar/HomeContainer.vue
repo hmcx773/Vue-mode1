@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="app">
     <van-swipe :autoplay="3000" indicator-color="white">
       <van-swipe-item v-for="(item, index) in items" :key="index" :class="className">
         <img :src="item.img" alt>
@@ -44,6 +44,7 @@ export default {
 };
 </script>
 <style lang="less" scoped>
+
 .lunbo {
   height: 200px;
   width: 100%;

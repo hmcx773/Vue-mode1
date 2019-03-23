@@ -30,9 +30,12 @@ import {
   Swipe,
   SwipeItem,
   Card,
-  Button
+  Button,
+  Tab,
+  Tabs,
+  Lazyload,
 } from 'vant';
-Vue.use(NavBar).use(Tabbar).use(TabbarItem).use(Swipe).use(SwipeItem).use(Card).use(Button);
+Vue.use(NavBar).use(Tabbar).use(TabbarItem).use(Swipe).use(SwipeItem).use(Card).use(Button).use(Tab).use(Tabs).use(Lazyload);
 
 Vue.config.productionTip = false
 

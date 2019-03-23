@@ -44,7 +44,7 @@ export default {
     async getComments() {
       const {
         data: { status, message }
-      } = await this.$http(`/api/getcomments/${this.id}?${this.pageindex}`);
+      } = await this.$http.get(`/api/getcomments/${this.id}?${this.pageindex}`);
       if (status === 0) {
         this.comments = this.comments.concat(message);
         // console.log(this.comments);
