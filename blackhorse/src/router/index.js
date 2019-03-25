@@ -7,10 +7,11 @@ import search from '../components/tabbar/SearchContainer'
 import shopcar from '../components/tabbar/ShopcarContainer'
 import newsList from '../components/news/newsList'
 import photolist from '../components/photo/photolist'
-import shoplist from '../components/news/shoplist'
+import shoplist from '../components/goodslist/shoplist'
 import videolist from '../components/news/videolist'
 import phonelist from '../components/news/phonelist'
 import newsinfo from '../components/news/newsinfo'
+import shopinfo from '../components/goodslist/shopinfo'
 import photoprive from '../components/photo/photoprive'
 
 Vue.use(Router)
@@ -53,6 +54,10 @@ export default new Router({
     {
       path: '/home/newsinfo/:id',
       component: newsinfo
+    },
+    {
+      path: '/home/shopinfo/:id',
+      component: shopinfo
     },
     {
       path: '/home/photoprive/:id',

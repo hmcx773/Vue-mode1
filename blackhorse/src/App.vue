@@ -1,10 +1,10 @@
 <template>
   <div id="app" class="app">
-    <van-nav-bar title="黑马程序员商城" :class="classObj"  />
+    <van-nav-bar title="黑马程序员商城" :class="classObj"/>
     <transition enter-active-class="fadeInRight" leave-active-class="fadeOutLeft">
       <router-view class="animated top" style="width: 100%"></router-view>
     </transition>
-    <van-tabbar v-model="active">
+    <van-tabbar v-model="active" class="bottom" id="cart">
       <van-tabbar-item icon="home-o" to="/home">首页</van-tabbar-item>
       <van-tabbar-item icon="contact" to="/member">会员</van-tabbar-item>
       <van-tabbar-item icon="cart-o" to="/shopcar" info="0">购物车</van-tabbar-item>
@@ -39,6 +39,7 @@ export default {
 <style scope lang="less">
 #app {
   overflow-x: hidden;
+  position: relative;
 }
 .app .van-nav-bar {
   position: fixed;
@@ -47,8 +48,9 @@ export default {
   z-index: 999 !important;
   left: 0;
 }
-.top{
+.top {
   margin-top: 46px;
+  margin-bottom: 50px;
 }
 .nav {
   background: skyblue;

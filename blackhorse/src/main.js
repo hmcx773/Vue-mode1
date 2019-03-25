@@ -34,8 +34,9 @@ import {
   Tab,
   Tabs,
   Lazyload,
+  Stepper
 } from 'vant';
-Vue.use(NavBar).use(Tabbar).use(TabbarItem).use(Swipe).use(SwipeItem).use(Card).use(Button).use(Tab).use(Tabs).use(Lazyload);
+Vue.use(NavBar).use(Tabbar).use(TabbarItem).use(Swipe).use(SwipeItem).use(Card).use(Button).use(Tab).use(Tabs).use(Lazyload).use(Stepper);
 
 Vue.config.productionTip = false
 

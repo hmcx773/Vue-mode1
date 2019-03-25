@@ -1,26 +1,21 @@
 <template>
   <div class="app">
-    <van-swipe :autoplay="3000" indicator-color="white">
-      <van-swipe-item v-for="(item, index) in items" :key="index" :class="className">
-        <img :src="item.img" alt>
-      </van-swipe-item>
-    </van-swipe>
+    <swipe :items="items"/>
     <Gird/>
   </div>
 </template>
 <script>
 import Gird from "../Sub/Gird";
+import swipe from "../Sub/swipe";
 export default {
   data() {
     return {
-      items: [],
-      className: {
-        lunbo: true
-      }
+      items: []
     };
   },
   components: {
-    Gird
+    Gird,
+    swipe
   },
   created() {
     this.getlunbo();
@@ -44,7 +39,6 @@ export default {
 };
 </script>
 <style lang="less" scoped>
-
 .lunbo {
   height: 200px;
   width: 100%;
