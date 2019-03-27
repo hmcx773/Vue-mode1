@@ -4,7 +4,6 @@ import Router from 'vue-router'
 import home from '../components/tabbar/HomeContainer'
 import member from '../components/tabbar/MemberContainer'
 import search from '../components/tabbar/SearchContainer'
-import shopcar from '../components/tabbar/ShopcarContainer'
 import newsList from '../components/news/newsList'
 import photolist from '../components/photo/photolist'
 import shoplist from '../components/goodslist/shoplist'
@@ -13,6 +12,7 @@ import phonelist from '../components/news/phonelist'
 import newsinfo from '../components/news/newsinfo'
 import shopinfo from '../components/goodslist/shopinfo'
 import photoprive from '../components/photo/photoprive'
+import shopcar from '../components/shopcar/car'
 
 Vue.use(Router)
 

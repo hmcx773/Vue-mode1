@@ -121,7 +121,15 @@ export default {
     },
     addToCart() {
       this.ballFlag = !this.ballFlag;
-    
+      var goodslist = {
+        id: this.id,
+        price: this.goodsinfo.sell_price,
+        count: this.value,
+        price: this.goodsinfo.sell_price,
+        src: this.items[0].src,
+        selected: true
+      };
+      this.$store.commit("add", goodslist);
       this.btnFlag = true;
       setTimeout(() => {
         // 再次把禁用效果取消
@@ -133,7 +141,7 @@ export default {
     },
     enter(el, done) {
       el.offsetTop;
-        this.getBound();
+      this.getBound();
       el.style.transform = `translate(${this.xDist}px,${this.yDist}px)`;
       el.style.transition = "all .4s ease";
       done();

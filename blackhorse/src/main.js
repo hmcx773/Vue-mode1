@@ -12,6 +12,8 @@ Vue.use(router)
 //导入路由组件
 // import index from './router/index'
 
+import store from './store'
+
 import axios from 'axios'
 Vue.prototype.$http = axios
 axios.defaults.baseURL = "http://localhost:5000"
@@ -34,9 +36,11 @@ import {
   Tab,
   Tabs,
   Lazyload,
-  Stepper
+  Stepper,
+  Switch,
+  SubmitBar
 } from 'vant';
-Vue.use(NavBar).use(Tabbar).use(TabbarItem).use(Swipe).use(SwipeItem).use(Card).use(Button).use(Tab).use(Tabs).use(Lazyload).use(Stepper);
+Vue.use(NavBar).use(Tabbar).use(TabbarItem).use(Swipe).use(SwipeItem).use(Card).use(Button).use(Tab).use(Tabs).use(Lazyload).use(Stepper).use(Switch).use(SubmitBar);
 
 Vue.config.productionTip = false
 
@@ -44,6 +48,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   components: {
     App
   },

@@ -39,13 +39,6 @@ export default {
 };
 </script>
 <style lang="less" scoped>
-.lunbo {
-  height: 200px;
-  width: 100%;
-  > img {
-    width: 100%;
-    height: 200px;
-  }
-}
+
 </style>
 
