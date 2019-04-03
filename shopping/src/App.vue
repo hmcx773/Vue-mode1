@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="app">
-    <van-nav-bar title="黑马程序员商城" :class="classObj"/>
+    <van-nav-bar title="商城" :class="classObj"/>
     <transition enter-active-class="fadeInRight" leave-active-class="fadeOutLeft">
       <router-view class="animated top" style="width: 100%"></router-view>
     </transition>
